@@ -1,0 +1,19 @@
+package ListaEncadeada;
+
+public class Main {
+  public static void main(String[] args) {
+		ListaE lista = new ListaE();
+		
+		Pessoa p = new Pessoa("Alex");
+		lista.add(p);		
+		Pessoa p1 = new Pessoa("Pedro");
+		Pessoa p2 = new Pessoa("Lucas");
+		Pessoa p3 = new Pessoa("Lucas");
+		lista.add(p1);
+		lista.add(p2);
+		lista.add(p3);
+		
+		lista.imprimirLista();
+	}
+
+}
