@@ -1,7 +1,7 @@
 package ListaEncadeada;
 
 public class ListaE implements Lista{
-  No cabeca;
+	No cabeca;
 	No cauda;
 	
 	@Override
@@ -28,9 +28,11 @@ public class ListaE implements Lista{
 			while(aux.getProximo() != null){
 				System.out.println(aux.getPessoa().getNome());
 				aux = aux.getProximo();
+				if(aux.getProximo() == null){
+					System.out.println(cauda.getPessoa().getNome());
+				}
 			}
-			System.out.println("Ultimo elemento:");
-			System.out.println(cauda.getPessoa().getNome());
+			
 		
 		
 	}
