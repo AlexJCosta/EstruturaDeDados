@@ -1,0 +1,38 @@
+package ListaEncadeada;
+
+public class ListaE implements Lista{
+  No cabeca;
+	No cauda;
+	
+	@Override
+	public void add(Pessoa p) {
+		No no = new No(p);
+		if(cabeca == null){
+			cabeca = no;
+			cauda = no;
+			return;
+		}else
+			cauda.setProximo(no);
+			cauda = cauda.getProximo();
+		
+	}
+
+	@Override
+	public void imprimirLista() {
+		No aux = cabeca;
+		if(cabeca.getProximo() == null){
+			System.out.println("Lista com apenas 1 elemento");
+			System.out.println(cabeca.getPessoa().getNome());
+		}else
+			System.out.println("Lista com varios elementos");
+			while(aux.getProximo() != null){
+				System.out.println(aux.getPessoa().getNome());
+				aux = aux.getProximo();
+			}
+			System.out.println("Ultimo elemento:");
+			System.out.println(cauda.getPessoa().getNome());
+		
+		
+	}
+
+}
